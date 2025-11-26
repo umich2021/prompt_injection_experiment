@@ -1,6 +1,7 @@
-from flask import Flask, request, redirect, jsonify
+from flask import Flask, request, redirect, jsonify, send_from_directory 
 from datetime import datetime
 import urllib.parse
+import os
 
 app = Flask(__name__)
 
@@ -70,5 +71,5 @@ def home():
 
 
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8080))
+    port = int(os.environ.get("PORT", 8081))
     app.run(host="0.0.0.0", port=port)
